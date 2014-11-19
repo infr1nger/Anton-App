@@ -1,0 +1,2 @@
+class SosController < ApplicationController
+end

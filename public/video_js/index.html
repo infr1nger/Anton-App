@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<link type="text/css" rel="stylesheet" href="https://vjs.zencdn.net/4.5.1/video-js.css" />
+<script src="https://vjs.zencdn.net/4.5.1/video.js"></script>
+<script src='videojs.markers.js'></script>
+
+
+
+<link href="videojs.markers.css" rel="stylesheet">
+</head>
+<body>
+<br />
+   <p>This is a demo of video-markers plugin for videojs</p>
+
+<video id="test_video" controls preload="none" class="video-js vjs-default-skin" width="640" height="264">
+      <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+      <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+    </video>
+
+<script>
+   // initialize video.js
+   var video = videojs('test_video');
+
+   //load the marker plugin
+   video.markers({
+      setting: {
+         markerTip:{
+            default_text: "This is a break"
+         },
+         breakOverlay:{
+            display: true,
+            display_time: 3,
+            default_text: "This is an break overlay "
+         }
+      },
+      //set break time
+      marker_breaks:[9.5, 13, 23, 28, 36],
+      marker_text:["this","is","so","COOOL",":)"]
+   });
+
+</script>
+  
+</body>
+</html>

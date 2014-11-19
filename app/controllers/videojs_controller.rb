@@ -1,0 +1,2 @@
+class VideojsController < ApplicationController
+end
